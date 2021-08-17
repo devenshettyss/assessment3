@@ -22,7 +22,7 @@ public class Accounts {
 			//create(statement); //create
 			retrieve(statement);
 //			update(statement);
-			Deposit(statement);
+			deposit(statement);
 //			delete(statement);
 //			List<String> regions = retrieveWithCondition(statement, "A");
 //			logger.debug(regions.toString());
@@ -52,7 +52,7 @@ public class Accounts {
 		}
 	}
 	
-	private static void Deposit(Statement statement) throws SQLException {
+	private static void deposit(Statement statement) throws SQLException {
 		statement.executeUpdate("Update Accounts set balance_amount = balance_amount + 15000 where ACCOUNT_ID = 1001");
 	}
 	private static void withdraw(Statement statement) throws SQLException {
